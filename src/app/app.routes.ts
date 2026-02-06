@@ -4,11 +4,13 @@ import { PageNotFoundComponent } from './error-routing/not-found/not-found.compo
 import { UncaughtErrorComponent } from './error-routing/error/uncaught-error.component';
 import { BasicCardsComponent } from './basic-cards/basic-cards.component';
 import { EqualHeightCardsComponent } from './equal-height-cards/equal-height-cards.component';
+import { ManualHeightCardsComponent } from './manual-height-cards/manual-height-cards.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'basic-cards', pathMatch: 'full' },
   { path: 'error', component: UncaughtErrorComponent },
   { path: 'basic-cards', component: BasicCardsComponent, data: { text: 'Basic-Cards' } },
   { path: 'equal-height-cards', component: EqualHeightCardsComponent, data: { text: 'Equal-Height-Cards' } },
+  { path: 'manual-height-cards', component: ManualHeightCardsComponent, data: { text: 'Manual-Height-Cards' } },
   { path: '**', component: PageNotFoundComponent } // must always be last
 ];
